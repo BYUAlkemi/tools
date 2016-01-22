@@ -109,24 +109,4 @@ if __name__ == "__main__":
     main()
 
     end = time.clock()
-
-def main():
-    cmdparser = argparse.ArgumentParser()
-    cmdparser.add_argument("-t","--timestep", nargs="?", default=1000, type=int, help="Enter an integer value representing the range of timesteps to slice the data into")
-    cmdparser.add_argument("-f","--file", nargs="+", help="Enter any number of file names to convert to HDF5 format")
-    args = cmdparser.parse_args()
-
-    if args.file:
-        for f in args.file:
-            csv_parser(args.timestep, f)
-    else:
-        print("Enter at least one file name")
-
-
-if __name__ == "__main__":
-    start = time.clock()
-
-    main()
-
-    end = time.clock()
     print "Total time: %d" % (end-start)

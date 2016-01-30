@@ -30,9 +30,9 @@ def main():
                         continue
                     fixed = fix_line(line)
                     lines.append('{},{}'.format(timestep, fixed))
-                if (len(lines) % chunk) == 0:
-                    out_fh.writelines(lines)
-                    lines = []
+                    if (len(lines) % chunk) == 0:
+                        out_fh.writelines(lines)
+                        lines = []
             # write any remaining lines
             out_fh.writelines(lines)
     except ValueError:

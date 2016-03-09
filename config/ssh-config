@@ -1,3 +1,5 @@
 Host rna
     HostName rna.cs.byu.edu
     User sparkUser00
+    DynamicForward 8157
+    Compression yes

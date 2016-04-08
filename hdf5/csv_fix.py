@@ -6,6 +6,7 @@ def fix_line(line, schema=False):
     else:
         if not line:
             return line
+	columns = line.split(',')
         fixed = line.replace('Vector2d', '').replace('<', '')\
             .replace('>', '').replace(' ', '')
         return fixed
